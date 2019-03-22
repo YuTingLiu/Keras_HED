@@ -24,8 +24,8 @@ class DataParser():
 
 	def __init__(self, batch_size_train):
 
-		self.train_file = os.path.join('/home/congliu/Desktop/HED-BSDS/', 'train_pair.lst')
-		self.train_data_dir = '/home/congliu/Desktop/HED-BSDS/'
+		self.train_file = os.path.join('/home/ubuntu/lyt/Keras_HED/HED-BSDS/', 'train_pair.lst')
+		self.train_data_dir = '/home/ubuntu/lyt/Keras_HED/HED-BSDS/'
 		self.training_pairs = read_file_list(self.train_file)
 		self.samples = split_pair_names(self.training_pairs, self.train_data_dir)
 

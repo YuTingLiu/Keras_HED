@@ -64,7 +64,7 @@ def hed():
 
     # model
     model = Model(inputs=[img_input], outputs=[o1, o2, o3, o4, o5, ofuse])
-    filepath = '/home/congliu/.keras/models/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
+    filepath = '/home/ubuntu/lyt/Keras_HED/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
     load_weights_from_hdf5_group_by_name(model, filepath)
 
     model.compile(loss={'o1': cross_entropy_balanced,
