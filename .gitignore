@@ -15,6 +15,7 @@ Mask_RCNN/mnist
 datasets/
 logs/
 *.h5
+*.tar
 *.model
 *.mat
 results/

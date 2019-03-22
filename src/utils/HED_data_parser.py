@@ -131,3 +131,9 @@ class DataParser():
 
 
 
+if __name__ == '__main__':
+    dataParser = DataParser(10)
+    idx = np.random.choice(dataParser.training_ids, 10)
+    images, edgemaps, filenames = dataParser.get_batch(idx)
+    print(len(images))
+    print(images[0])
