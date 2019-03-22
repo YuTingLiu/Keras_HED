@@ -30,7 +30,7 @@ class DataParser():
 		self.samples = split_pair_names(self.training_pairs, self.train_data_dir)
 
 		self.n_samples = len(self.training_pairs)
-		self.all_ids = range(self.n_samples)
+		self.all_ids = [x for x in range(self.n_samples)]
 		np.random.shuffle(self.all_ids)
 
 		train_split = 0.8

@@ -9,8 +9,9 @@ MODEL_FILE_NAME = vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
 
 GET_DATA = wget -c --no-cache -P . ${DATA_FILE_PATH}
 GET_MODEL = wget -c --no-cache -P . ${MODEL_FILE_PATH}
-
-
+UNPACK_DATA = tar -xvf HED-BSDS.tar
+DEL_TAR_FILE = rm -rf HED-BSDS.tar
+CHECKPOINT_DIR = mkdir checkpoints
 .PHONY: all
 all: deps compile
 
@@ -30,6 +31,9 @@ model:
 		if [ -e ${DATA_FILE_NAME} ] ; \
 		then \
 			echo "download ${DATA_FILE_NAME} done."; \
+			${UNPACK_DATA}; \
+			${DEL_TAR_FILE}; \
+			${CHECKPOINT_DIR}; \
 		else \
 			echo "***\nError - Could not download ${DATA_FILE_NAME}. Check network and proxy settings \n***\n"; \
 			exit 1; \
