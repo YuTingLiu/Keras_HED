@@ -11,13 +11,13 @@ import pdb
 
 def generate_minibatches(dataParser, train=True):
     pdb.set_trace()
-    # while True:
-    if train:
-        batch_ids = np.random.choice(dataParser.training_ids, dataParser.batch_size_train)
-    else:
-        batch_ids = np.random.choice(dataParser.validation_ids, dataParser.batch_size_train*2)
-    ims, ems, _ = dataParser.get_batch(batch_ids)
-    yield(ims, [ems, ems, ems, ems, ems, ems])
+    while True:
+        if train:
+            batch_ids = np.random.choice(dataParser.training_ids, dataParser.batch_size_train)
+        else:
+            batch_ids = np.random.choice(dataParser.validation_ids, dataParser.batch_size_train*2)
+        ims, ems, _ = dataParser.get_batch(batch_ids)
+        yield(ims, [ems, ems, ems, ems, ems, ems])
 
 ######
 if __name__ == "__main__":
