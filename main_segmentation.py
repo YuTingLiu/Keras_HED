@@ -32,7 +32,7 @@ if __name__ == "__main__":
     # environment
     K.set_image_data_format('channels_last')
     K.image_data_format()
-    os.environ["CUDA_VISIBLE_DEVICES"]= '0'
+    # os.environ["CUDA_VISIBLE_DEVICES"]= '0'
     if not os.path.isdir(model_dir): os.makedirs(model_dir)
 
     # prepare data
