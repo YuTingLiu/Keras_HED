@@ -10,7 +10,7 @@ import pdb
 
 
 def generate_minibatches(dataParser, train=True):
-    pdb.set_trace()
+    # pdb.set_trace()
     while True:
         if train:
             batch_ids = np.random.choice(dataParser.training_ids, dataParser.batch_size_train)
