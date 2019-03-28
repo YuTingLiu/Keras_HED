@@ -44,8 +44,8 @@ class DataParser():
 		assert len(self.validation_ids) % (batch_size_train*2) == 0
 		self.validation_steps = len(self.validation_ids)/(batch_size_train*2)
 
-		self.image_width = 480
-		self.image_height = 480
+		self.image_width = 240
+		self.image_height = 240
 		self.target_regression = True
 
 	def get_training_batch(self):
